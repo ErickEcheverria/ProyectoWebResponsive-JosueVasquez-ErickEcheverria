@@ -17,8 +17,10 @@ body {
 	grid-template-rows: repeat(4, auto);
 
 	grid-template-areas: "header header header"
-						 "contenido contenido sidebar"
-						 "widget-1 widget-2 sidebar"
+						 "sidebar contenido contenido"
+						 "sidebar widget-1 widget-2"
+						 "sidebar widget-3 widget-4"
+						 "sidebar widget-5 widget-6"
 						 "footer footer footer";
 }
 
@@ -59,7 +61,11 @@ body {
 }
 
 .contenedor .widget-1,
-.contenedor .widget-2 {
+.contenedor .widget-2,
+.contenedor .widget-3,
+.contenedor .widget-4,
+.contenedor .widget-5,
+.contenedor .widget-6 {
 	background: #55a8fd;
 	color: #fff;
 	height: 100px;
@@ -76,7 +82,18 @@ body {
 .contenedor .widget-2 {
 	grid-area: widget-2;
 }
-
+.contenedor .widget-3 {
+	grid-area: widget-3;
+}
+.contenedor .widget-4 {
+	grid-area: widget-4;
+}
+.contenedor .widget-5 {
+	grid-area: widget-5;
+}
+.contenedor .widget-6 {
+	grid-area: widget-6;
+}
 .contenedor .footer {
 	background: #424141;
 	color: #fff;
