@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header a{
+    color: blanchedalmond;
+    text-decoration: none;
+    text-align: left;
+}
+main{
+    width: 100%;
+    height: auto;
+    background: #f29136 ;
+    position: absolute;
+}
+header{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background: #000000;
+    left: 0;
+    top: 0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-gap: 10px;
+    margin-bottom: 6%;
+    padding-top: 5%;
+}
+.card{
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 30 30 30px rgba(0,0,0,0.18);
+}
+.container{
+    position: relative;
+}
+.container img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+.container:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.details{
+    padding: 20px 10px;
+}
+.details>h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+.details>p{
+    color: black;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.cards a{
+    text-decoration: none;
+    color: white;
+}
+
+.intro{
+    background-color: #f29136;
+    padding: 1em;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 10%;
+    height: 800px;
+}
+
+.titulo{
+    margin: 1em;
+    padding: 1em;
+    width: 50%;
+}
+
+.video{
+    margin: 1em;
+    padding: 1em;
+    width: 50%;
+}
+
+
+.titulo h1,p{
+    color: #ffffff;
+}
+
+.titulo h1{
+    font-size: 2.5em;
+}
+
+.titulo p{
+    font-size: 18px;
+}
+
+.plan a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+
+}
+
+.plan{
+    width: 40%;
+    height: 35px;
+    text-align: center;
+    background-color: #000000;
+    padding-top: 15px;
+}
+.footer {
+	background: #424141;
+	color: #fff;
+    grid-area: footer;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px){
+    .plan{
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 779px){
+    .plan{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 739px){
+
+    .intro{
+        flex-direction: column;
+    }
+    .titulo{
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .video{
+        width: 100%;
+        text-align: center;
+    }
+
+    .plan{
+        width: 35%;
+        padding-top: 17px;
+        margin-left: 32.5%;
+        margin-right: 32.5%;
+    }
+
+
+}
