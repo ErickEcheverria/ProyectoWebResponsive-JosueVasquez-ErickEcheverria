@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #f29136;
+	color: #000;
+	font-family: 'Arial', sans-serif;
+}
+.contenedor {
+    width: 95%;
+	max-width: 4500px;
+	margin: 10px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido-1 contenido-1 contenido-1"
+                         "contenido-2 contenido-2 contenido-2"
+                         "contenido-3 contenido-3 contenido-3"
+                         "contenido-4 contenido-4 contenido-4"
+                         "contenido-5 contenido-5 contenido-5"
+                         "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido-1,
+.contenedor .contenido-2,
+.contenedor .contenido-3,
+.contenedor .contenido-4,
+.contenedor .contenido-5,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+.contenedor .header {
+	background: #000000;
+	color: #fff;
+	grid-area: header;
+}
+.contenedor .header a{
+    color: blanchedalmond;
+    text-decoration: none;
+}
+.contenedor .contenido-1 {
+    grid-area: contenido-1;
+    text-align: justify;
+}
+.contenedor .contenido-2 {
+    grid-area: contenido-2;
+    text-align: justify;
+}
+.contenedor .contenido-3 {
+    grid-area: contenido-3;
+    text-align: justify;
+}
+.contenedor .contenido-4 {
+    grid-area: contenido-4;
+    text-align: justify;
+}
+.contenedor .contenido-5 {
+    grid-area: contenido-5;
+    text-align: justify;
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #2a2361;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+    grid-area: sidebar;
+    text-align: justify;
+    color: white;
+}
+.contenedor .footer {
+	background: #424141;
+	color: #fff;
+    grid-area: footer;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						"sidebar sidebar sidebar"
+						 "contenido-1 contenido-1 contenido-1"
+                         "contenido-2 contenido-2 contenido-2"
+                         "contenido-3 contenido-3 contenido-3"
+                         "contenido-4 contenido-4 contenido-4"
+                         "contenido-5 contenido-5 contenido-5"
+						 "footer footer footer";
+	}
+}
